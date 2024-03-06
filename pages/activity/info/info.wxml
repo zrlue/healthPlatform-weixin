@@ -1,0 +1,63 @@
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">服务详情</view>
+</cu-custom>
+<view class="bg-white padding">
+  <view class="cu-card case ">
+    <view class="card_img">
+      <image src="{{info.cover}}" mode="scaleToFill"></image>
+    </view>
+    <view class="card_title">
+      {{info.name}}
+    </view>
+    <view class="text-red">服务价格:￥{{info.price}}元/月</view>
+    <view class="cu-list menu" style="margin-top:10px"></view>
+    <view class="info_title"> 服务介绍 </view>
+    <view class="padding" style="padding-left:0px;padding-right:0px">
+      {{info.intro}}
+    </view>
+    <view class="padding text-align">
+      <view class="cu-bar btn-group">
+      <!-- 设置data-target="ReservationService"参数用来设置弹窗出现 -->
+        <button class="cu-btn text-red line-red shadow round" bindtap="showModal" data-target="ReservationService" data-id="{{info.housesId}}">预约服务</button>
+        <button class="cu-btn bg-green shadow-blur round" bindtap="dial" data-id="{{info.tel}}">电话联系</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cu-modal {{modalName=='ReservationService'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content text-red text-price">{{info.price}}</view>
+      <!-- 点击该删除按钮调用隐藏预约服务模块方法 -->
+      <view class="action" bindtap="hideModal">
+          <!-- 删除按钮 -->
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view style="margin-top: 10rpx;" class="cu-form-group ">
+      <view class="title">预约时间</view>
+      <!-- 设置有效期范围在一年内 -->
+      <picker mode="date" value="{{startdate}}" start="2024-01-01" end="2024-12-30" bindchange="DateChange">
+        <view class="picker">
+          {{startdate}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group align-start">
+      <view class="title">留言</view>
+      <!-- 限制输入文本数量为1000 -->
+      <textarea maxlength="1000" bindinput="getcontent" placeholder="请输入留言的内容"></textarea>
+    </view>
+    <view class="padding-xl">
+    <!-- 模拟支付过程，所以支付密码设置为123456 -->
+      <input type="password" placeholder="请输入支付密码" bindinput="userPass"></input>
+    </view>
+    <view class="cu-bar bg-white">
+      <view catchtap="pay" class="action margin-0 flex-sub text-green " bindtap="hideModal">
+        <text class="cuIcon-moneybag"></text>确认支付
+      </view>
+      <view class="action margin-0 flex-sub text-green solid-left" bindtap="hideModal">取消</view>
+    </view>
+  </view>
+</view>

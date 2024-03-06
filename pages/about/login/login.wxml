@@ -1,0 +1,27 @@
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">登录</view>
+</cu-custom>
+<view class="UCenter-bg">
+	<view class="text-xxl">用户登录</view>
+</view>
+<view class='bg-white radius shadow-lg'>
+	<form>
+		<view class="cu-form-group">
+			<view class="title">用户名</view>
+			<input placeholder="请输入用户名" bindinput="userName"></input>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">密码</view>
+			<input type="password" placeholder="请输入密码" bindinput="userPass"></input>
+		</view>
+		<view class="cu-form-group">
+			<navigator url="/pages/about/reg/reg" hover-class="none">
+				<button class="cu-btn bg-cyan shadow">点击注册</button>
+			</navigator>
+		</view>
+		<view class="padding flex flex-direction" bindtap='login'>
+			<button class="cu-btn bg-cyan lg">登录</button>
+		</view>
+	</form>
+</view>

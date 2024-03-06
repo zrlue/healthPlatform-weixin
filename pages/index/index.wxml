@@ -1,0 +1,27 @@
+<basics wx:if="{{PageCur=='basics'}}"></basics>
+<record wx:if="{{PageCur=='record'}}"></record>
+<about wx:if="{{PageCur=='about'}}"></about>
+<plate wx:if="{{PageCur=='plate'}}"></plate>
+<news wx:if="{{PageCur=='news'}}"></news>
+<view class="cu-bar tabbar  bg-white foot">
+  <view class="action {{PageCur=='basics'?'text-cyan':'text-gray'}}" bindtap="NavChange" data-cur="basics">
+    <view class="cuIcon-homefill"></view> 首页
+  </view>
+  <view class="action {{PageCur=='plate'?'text-cyan':'text-gray'}}" bindtap="NavChange" data-cur="plate">
+    <view class="cuIcon-message"></view> 健康服务
+  </view>
+  <view class="action text-gray add-action">
+    <navigator url="#" hover-class="none">
+      <button catchtap="rescue" class="cu-btn cuIcon-add bg-red shadow"></button>
+      一键呼救
+    </navigator>
+  </view>
+
+  <view class="action {{PageCur=='record'?'text-cyan':'text-gray'}}" bindtap="NavChange" data-cur="record">
+    <view class="cuIcon-read"></view>社区活动
+  </view>
+
+  <view class="action {{PageCur=='about'?'text-cyan':'text-gray'}}" bindtap="NavChange" data-cur="about">
+    <view class="cuIcon-my"></view> 我的
+  </view>
+</view>

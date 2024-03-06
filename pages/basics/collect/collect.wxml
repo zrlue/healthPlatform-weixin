@@ -1,0 +1,31 @@
+
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+<view slot="backText">返回</view>
+<view slot="content">我的收藏</view>
+</cu-custom>
+<view style=" overflow:hidden;padding-bottom:50px">
+<view class="tui-block__box ">
+</view>
+<view >
+  <view class="cu-card article {{isCard?'no-card':''}}">
+  <view   wx:for="{{list}}"  data-id="{{item.newsId}}" catchtap="toReply" class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">{{item.title}}</view>
+    </view>
+    <view  class="content">
+      <image src="{{item.pic}}" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">{{item.introduce}}</view>
+        <view>
+   
+          <view class="cu-tag bg-green light sm round">{{item.createTime}}</view>
+        </view>
+      </view>
+    </view>
+   
+  </view>
+  
+</view>
+
+</view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "basics": "/pages/activity/news/news",
+    "record": "/pages/activitis/activitis",
+    "plate": "/pages/activity/healthyService/healthyService",
+    "about":"/pages/about/home/home"
+  }
+}

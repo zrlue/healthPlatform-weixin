@@ -1,0 +1,28 @@
+<cu-custom bgColor="bg-cyan">
+    <view slot="content">健康服务</view>
+</cu-custom>
+<view class="cu-bar bg-white search">
+    <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" style="color:rgb(14, 8, 8)" placeholder="输入搜索的服务名称" confirm-type="search" bindinput="getHealthyServiceList"></input>
+    </view>
+</view>
+<view class="bg-white padding margin-top-sm">
+    <view class="grid col-1  text-black text-bold text-xl text-center">
+        <view>健康服务</view>
+    </view>
+</view>
+
+<view class='nav-list grid col-4  bg-white canui-shop-goods-list'>
+    <!-- 点击就跳转到info页面 -->
+    <navigator wx:for="{{list}}" wx:key="{{item.index}}" class="nav-li" open-type="navigate" hover-class='none' url="/pages/activity/info/info?id={{item.serviceId}}">
+        <image src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="nav-li-box">
+            <view class="nav-title canui-xzwz text-sm">{{item.name}}</view>
+            <view class="shop-zx">
+                <text class="text-price text-red text-xs">{{item.price}} </text>
+            </view>
+        </view>
+    </navigator>
+</view>
+<view class='cu-tabbar-height'></view>

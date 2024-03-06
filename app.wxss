@@ -1,0 +1,83 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+.cu-list.menu-avatar>.cu-item{
+    padding-left:220rpx;
+} 
+.goods-list .cu-item .action-checkbox{
+    left:30rpx;
+    position:absolute;
+}
+.cu-list.menu-avatar>.cu-item>.cu-avatar{
+    left:10rpx;
+}
+.goods-list .cu-item .goods-price-btn{
+    position:relative;
+}
+.goods-list .cu-item .text-price{
+    padding-right:260rpx;
+}
+.goods-list .cu-item .action-btn-sum{
+    position:absolute;
+    right:0px;
+    top:0px;
+    text-align:right;
+    border:1px solid #D9D9D9;
+    border-radius:2px;
+}
+.goods-list .cu-item .cu-btn{
+    float:left;
+    width:24px;
+    height:24px;
+    line-height:24px;
+    border-radius:0px;
+    font-size:18px;
+    padding:0px;
+    background-color: #F7F6F6;
+}
+.goods-list .cu-item .ca-sum{
+    float:left;
+    width:32px;
+    height:24px;
+    text-align:center;
+    font-size:12px;
+    line-height:24px;
+    background-color: #fbfbfb;
+    border-left:1px solid #D9D9D9;
+    border-right:1px solid #D9D9D9;
+    min-height:24px;
+}
+.canui-foor-fixed{
+    position: fixed;
+    bottom: 52px;
+    width: 100%;
+    min-height:85rpx;
+}
+.canui-checked{
+    width:75rpx;
+}
+.canui-delete{
+    width:100rpx;
+}
+.canui-delete .cu-btn{
+    background-color:#fff;
+    font-size:35rpx;
+}
+.canui-price{
+    width:400rpx;
+    text-align:right;
+    align-self:stretch;
+    line-height:85rpx;
+    padding-right:20px;
+    font-size:13px;
+}
+.canui-submit{
+    width:200rpx;
+    align-self:stretch;
+    align-items:center;
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    font-size:13px;
+}
+

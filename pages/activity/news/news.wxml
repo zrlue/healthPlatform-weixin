@@ -1,0 +1,74 @@
+<cu-custom bgColor="bg-cyan">
+  <view slot="content">首页</view>
+</cu-custom>
+<view class="cu-bar bg-white search ">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" bindinput="getNewList" placeholder="资讯搜索" confirm-type="search"></input>
+  </view>
+</view>
+<view class="cu-list grid col-4 no-border">
+  <view class="cu-item">
+    <!-- 点击就跳转到对应的页面 -->
+    <navigator url="/pages/activity/list/list" hover-class="none">
+      <view class="text-yellow">
+        <image src="../../../images/健康.png" style="height:90rpx;width:90rpx"></image>
+      </view>
+      <text>健康档案</text>
+    </navigator>
+  </view>
+  <view class="cu-item">
+    <navigator url="/pages/activity/order/order" hover-class="none">
+      <image src="../../../images/服务预约.png" style="height:90rpx;width:90rpx"></image>
+      <text>我的预约</text>
+    </navigator>
+  </view>
+  <view class="cu-item">
+    <navigator url="/pages/basics/message/message" hover-class="none">
+      <image src="../../../images/问诊.png" style="height:90rpx;width:90rpx"></image>
+      <text>在线问诊</text>
+    </navigator>
+  </view>
+  <view bindtap="rescue" class="cu-item">
+    <navigator url="#" hover-class="none">
+      <image src="../../../images/供需互助.png" style="height:90rpx;width:90rpx"></image>
+      <text>一键呼救</text>
+    </navigator>
+  </view>
+</view>
+<!-- 轮播图模块 -->
+<swiper class="screen-swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <image src="{{item.url}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+<!-- 养生资讯类型展示 -->
+<scroll-view scroll-x class="bg-white nav text-center">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{Tab}}" wx:key="name" bindtap="tabSelect" data-id="{{index}}">
+    {{item}}
+  </view>
+</scroll-view>
+<!-- 文章展示 -->
+<view style=" overflow:hidden;padding-bottom:50px">
+  <view class="tui-block__box ">
+  </view>
+  <view>
+    <view class="cu-card article ">
+      <!-- 点击后跳转到详情页 -->
+      <view wx:for="{{list}}" data-id="{{item.newsId}}" wx:key="*this" catchtap="toDetail" class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.pic}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">{{item.introduce}}</view>
+            <view>
+              <view class="cu-tag bg-green light sm round">{{item.createTime}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

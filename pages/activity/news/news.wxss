@@ -1,0 +1,188 @@
+page{
+  background:#f9f9f9; 
+}
+.v_1{
+  margin-top: 10px;
+  width: 100%
+
+}
+.shouchang_1{
+  width:25px;
+  margin-top:45rpx ;
+   height:25px;
+   z-index: 9999;
+   margin-left: 20rpx;
+   text-align: center;
+   margin-right: 10rpx
+ }
+ .shouchang{
+  margin-top:45rpx ;
+  width: 25px;
+  z-index: 9999;
+   height:25px;
+   margin-left: 20rpx;
+   text-align: center;
+   margin-right: 10rpx
+ }
+
+ .tui-bg {
+  width: 100%;
+  height: 260rpx;
+  background: linear-gradient(45deg, #068df0, #16adc7);
+  border-bottom-left-radius: 32rpx;
+  border-bottom-right-radius: 32rpx;
+}
+
+.tui-content {
+  padding: 0 35rpx;
+  box-sizing: border-box;
+}
+
+.tui-form {
+  background: #fff;
+  box-shadow: 0 10rpx 14rpx 0 rgba(0, 0, 0, 0.08);
+  border-radius: 15rpx;
+  margin-top: -160rpx;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.tui-icon {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  margin-top: 60rpx;
+}
+
+.tui-title {
+  font-size: 42rpx;
+  line-height: 42rpx;
+  padding-top: 28rpx;
+}
+
+.tui-sub-title {
+  color: #666666;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding-top: 20rpx;
+}
+
+.tui-btn-box {
+  width: 580rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 88rpx;
+}
+
+.tui-tips {
+  font-size: 26rpx;
+  padding: 48rpx 90rpx;
+  box-sizing: border-box;
+  text-align: justify;
+  line-height: 48rpx;
+}
+
+.tui-grey {
+  color: #555;
+  padding-bottom: 8rpx;
+}
+
+.tui-light-grey {
+  color: #888;
+  line-height: 40rpx;
+}
+
+.tui-block__box {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+
+}
+
+.tui-mtop__20 {
+  margin-top: 20rpx;
+  margin-bottom: 140rpx;
+}
+.screen-swiper {
+  margin-top:10px;
+  margin-left:15px;
+  margin-right: 15px;
+  min-height: 300rpx;
+}
+.tui-group-name {
+  width: 100%;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  font-weight: bold;
+  padding: 30rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+}
+
+.tui-sub__desc {
+  color: #34c7a9;
+  font-size: 28rpx;
+  font-weight: 400;
+  padding-left: 25rpx;
+}
+
+
+.tui-news-flex {
+  width: 100%;
+  display: flex;
+}
+
+.tui-flex-start {
+  align-items: flex-start !important;
+}
+
+.tui-flex-center {
+  align-items: center !important;
+}
+
+.lbbg {
+  font-size: 16px;
+  width: 100%;
+  padding: 10rpx;
+  color: black;
+  font-weight: 800;
+  padding: 2px 0;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  transform: translateX(0%);
+  text-align: left;
+  z-index:999
+}
+
+.lbtxt{
+  color:#FFFFFF;padding-left:30rpx;
+}
+
+.card_title {
+  font-size: 30rpx;
+  font-weight: 900;
+  color: var(--black);
+}    
+.card_content {
+  font-size: 28rpx;
+  color: #888;
+  height: 2.4em;
+  overflow: hidden;
+}
+.line{
+  border-bottom: 1px solid #eaeef1;
+  padding-bottom:15rpx
+}
+
+.iconimg{
+  width: 100rpx;
+  height: 100rpx;
+}

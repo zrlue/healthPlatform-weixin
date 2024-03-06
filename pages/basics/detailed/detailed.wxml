@@ -1,0 +1,27 @@
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">{{info.title}}</view>
+</cu-custom>
+<view class="bg-white padding">
+  <view class="cu-card case isCard">
+    <view class="card_title">
+      {{info.title}}
+    </view>
+    <view class="cu-bar bg-white solid-bottom">
+      <view class="linelabel">
+        <text class="text-grey" style="margin-left:5px">{{info.createTime}}</text>
+      </view>
+      <!-- <view class="action" bindtap="shouchang"   wx:if="{{!info.t}}"  >
+       <image src="../../../images/未收藏.png" style="height:60rpx;width:60rpx"></image>
+    </view>
+    <view class="action" bindtap="shouchang"   wx:if="{{info.t}}"  >
+       <image src="../../../images/收藏.png" style="height:60rpx;width:60rpx"></image>
+    </view> -->
+    </view>
+    <view class="linelabel">
+    </view>
+    <view class="desc" style="line-height: 20px;font-size: 9pt;">
+      <rich-text nodes="{{info.content}}"></rich-text>
+    </view>
+  </view>
+</view>

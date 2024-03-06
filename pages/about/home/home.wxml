@@ -1,0 +1,29 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <navigator wx:if="{{isLogin == false}}" url="/pages/about/login/login" hover-class="none">
+      <view class="cu-avatar xl round" style="background-image:url(http://www.beerlue.icu/img/littlegirl.jpg);"></view>
+      <view class="text-xl text-center">点击登陆</view>
+    </navigator>
+    <navigator wx:if="{{isLogin == true}}" url="/" hover-class="none">
+      <view class="cu-avatar xl round" style="background-image:url({{head}});"></view>
+      <view class="text-xl text-center">{{name}}</view>
+    </navigator>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view wx:if="{{isLogin == true}}" class="cu-item arrow">
+      <navigator class="content" url="/pages/about/me/me" hover-class="none">
+        <text class="cuIcon-form text-orange"></text>
+        <text class="text-grey">我的信息</text>
+      </navigator>
+    </view>
+
+    <view wx:if="{{isLogin == true}}" class="cu-item">
+      <view class="content" bindtap='loginOut'>
+        <text class="cuIcon-exit text-blue"></text>
+        <text class="text-grey">退出登陆</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

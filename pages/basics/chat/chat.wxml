@@ -1,0 +1,32 @@
+<cu-custom bgColor="bg-cyan" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">
+  问诊记录</view></cu-custom>
+<view wx:for="{{list}}" wx:key="id"  catchtap="toReply"  data-id="{{item.messageId}}" class="cu-chat">
+  <view  wx:if="{{item.t}}"  class="cu-item self">
+    <view class="main">
+      <view class="content bg-cyan shadow">
+        <text>{{item.context}}</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url({{item.head}});"></view>
+    <view class="date">{{item.createTime}}   </view>
+
+  </view>
+
+  <view wx:else class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url({{item.head}});"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>{{item.context}}</text>
+      </view>
+    </view>
+    <view class="date ">{{item.time}}  <text  class="bg-red"></text>   </view>
+  </view>
+</view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text data-target="menuModal" data-id="{{userId}}" catchtap="showModal" class="text-grey"></text>
+  </view>
+  <input class="solid-bottom" value="{{content}}"  placeholder="请输入点问诊内容吧..."   focus="{{false}}" maxlength="300" cursor-spacing="10" bindinput="content"></input>
+  <button class="cu-btn bg-cyan shadow" bindtap="send">发送</button>
+</view>

@@ -1,0 +1,35 @@
+<cu-custom bgColor="bg-cyan" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">档案详情</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom ">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 档案信息
+  </view>
+</view>
+<!-- 档案详细信息 -->
+<view class="cu-card article ">
+  <view data-id="{{info.acidId}}" class="cu-item cu-bar bg-white solid-bottom shadow">
+    <view style="padding:8px">
+      <view class="text-red">患者：{{info.name}}</view>
+      <view style="margin-top: 10rpx;">病情记录：{{info.record}}</view>
+      <view style="margin-top: 10rpx;">医生建议：{{info.advise}}</view>
+      <view style="margin-top: 10rpx;" class="text-blue">检查时间：{{info.time}}</view>
+      <view style="margin-top: 10rpx;" class="text-red">医生：{{info.opeName}}</view>
+      <view style="margin-top: 10rpx;background-color: rgb(90, 216, 216);" class="cu-tag text-white">医生电话：{{info.tel}}</view>
+    </view>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom ">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 报告显示
+  </view>
+</view>
+<!-- 报告显示 -->
+<view class="cu-card article ">
+  <view class="cu-item cu-bar bg-white solid-bottom shadow">
+    <view style="padding:8px">
+      <image bindtap="ViewImage" data-url="{{info.report}}" src="{{info.report}}" />
+    </view>
+  </view>
+</view>

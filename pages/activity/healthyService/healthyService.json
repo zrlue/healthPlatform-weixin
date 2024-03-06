@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "basics": "/pages/index/index",
+    "my":"/pages/about/home/home"
+    
+  } 
+}

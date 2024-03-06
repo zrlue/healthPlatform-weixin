@@ -1,0 +1,16 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">社区活动</view>
+</cu-custom>
+<view class="cu-bar bg-white">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的社区活动名称" confirm-type="search" bindinput="getData"></input>
+  </view>
+</view>
+
+<view class='news-item' wx:for="{{allList}}" bindtap="goInfo" data-id="{{item.activityId}}">
+  <text class='title'>{{item.title}}</text>
+  <text class=' fr text-red '>{{item.time}}</text>
+  <image class='description-image' src='{{item.pic}}'></image>
+  <text class='description'>{{item.context}}</text>
+</view>

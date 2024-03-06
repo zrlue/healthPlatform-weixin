@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/home/home",
+    "pages/basics/record/record",
+    "pages/health/home",
+    "pages/basics/detailed/detailed",
+    "pages/activity/info/info",
+    "pages/about/login/login",
+    "pages/about/reg/reg",
+    "pages/activity/reply/reply",
+    "pages/activity/order/order",
+    "pages/activity/list/list",
+    "pages/activity/report/report",
+    "pages/about/me/me",
+    "pages/basics/message/message",
+    "pages/basics/addMessage/addMessage",
+    "pages/basics/chat/chat"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "居家养老服务系统",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

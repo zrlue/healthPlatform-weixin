@@ -1,0 +1,30 @@
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+  <view slot="content">在线问诊</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 问诊列表
+  </view>
+  <view class="action">
+    <!-- 跳转到添加留言页面 -->
+    <navigator url="/pages/basics/addMessage/addMessage" hover-class="none">
+      <button class="cu-btn bg-green shadow" >我要问诊</button>
+    </navigator>
+  </view>
+</view>
+<view style="overflow:hidden;padding-bottom:70px">
+  <view class="cu-list menu-avatar">
+    <view wx:for="{{list}}" wx:key="id" catchtap="toReply" data-id="{{item.questionId}}" class="cu-item ">
+      <view class="cu-avatar radius lg" style="background-image:url({{item.head}});"></view>
+      <view class="content">
+        <view>
+          <text class="text-cut">{{item.nickName}}</text>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">{{item.context}}</text>
+        </view>
+        <view class="cu-tag bg-red light " catchtap="delete" data-id="{{item.questionId}}" style="float:right">删除</view>
+      </view>
+    </view>
+  </view>
+</view>
